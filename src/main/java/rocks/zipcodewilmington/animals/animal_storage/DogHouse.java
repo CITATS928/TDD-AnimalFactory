@@ -2,6 +2,8 @@ package rocks.zipcodewilmington.animals.animal_storage;
 
 import rocks.zipcodewilmington.animals.Dog;
 
+import java.util.ArrayList;
+
 /**
  * @author leon on 4/19/18.
  */
@@ -9,6 +11,7 @@ public class DogHouse {
     private static AnimalWarehouse<Dog> dogHouse = new AnimalWarehouse<>();
 
     public static void add(Dog dog) {
+
         dogHouse.add(dog);
     }
 
@@ -25,6 +28,7 @@ public class DogHouse {
     }
 
     public static Integer getNumberOfDogs() {
+
         return dogHouse.getNumberOfAnimals();
     }
 

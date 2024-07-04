@@ -9,7 +9,7 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public abstract class Mammal implements Animal {
-    private final Integer id;
+    private final Integer id;//cant chang in instance, chan change in constructure?
     private ArrayList<Food> eatenMeals;
     private String name;
     private Date birthDate;
@@ -20,6 +20,12 @@ public abstract class Mammal implements Animal {
         this.eatenMeals = new ArrayList<>();
         this.id = id;
     }
+
+    public Mammal(){
+        this.id = 5;
+        this.eatenMeals = new ArrayList<>();
+    }
+
 
     public String getName() {
         return name;
@@ -39,11 +45,13 @@ public abstract class Mammal implements Animal {
 
 
     public Integer getNumberOfMealsEaten() {
+        //System.out.println("size is "+eatenMeals.size());
         return eatenMeals.size();
     }
 
     public void eat(Food food) {
         eatenMeals.add(food);
+
     }
 
     @Override
